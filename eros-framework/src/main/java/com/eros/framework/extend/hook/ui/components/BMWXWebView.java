@@ -54,6 +54,9 @@ public class BMWXWebView implements IWebView {
         root.setBackgroundColor(Color.TRANSPARENT);
 
         mWebView = new WebView(mContext);//mContext.getApplicationContext();
+        mWebView.removeJavascriptInterface("searchBoxJavaBridge_");
+        mWebView.removeJavascriptInterface("accessibility");
+        mWebView.removeJavascriptInterface("accessibilityTraversal");
         FrameLayout.LayoutParams wvLayoutParams =
                 new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,
                         FrameLayout.LayoutParams.MATCH_PARENT);

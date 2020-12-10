@@ -86,6 +86,9 @@ public class GlobalWebViewActivity extends AbstractWeexActivity {
         rl_refresh = findViewById(R.id.rl_refresh);
         mProgressBar = (ProgressBar) findViewById(R.id.pb_progress);
         mWeb = (WebView) findViewById(R.id.webView);
+        mWeb.removeJavascriptInterface("searchBoxJavaBridge_");
+        mWeb.removeJavascriptInterface("accessibility");
+        mWeb.removeJavascriptInterface("accessibilityTraversal");
         mContainer = (RelativeLayout) findViewById(R.id.rl_container);
         WebSettings settings = mWeb.getSettings();
         settings.setCacheMode(WebSettings.LOAD_NO_CACHE);

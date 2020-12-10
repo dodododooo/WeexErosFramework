@@ -41,6 +41,9 @@ public class BMWebView implements IWebView {
         FrameLayout root = new FrameLayout(this.mContext);
         root.setBackgroundColor(-1);
         this.mWebView = new WebView(this.mContext);
+        this.mWebView.removeJavascriptInterface("searchBoxJavaBridge_");
+        this.mWebView.removeJavascriptInterface("accessibility");
+        this.mWebView.removeJavascriptInterface("accessibilityTraversal");
         FrameLayout.LayoutParams wvLayoutParams = new FrameLayout.LayoutParams(-1, -1);
         wvLayoutParams.gravity = 17;
         this.mWebView.setLayoutParams(wvLayoutParams);

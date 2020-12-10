@@ -72,6 +72,10 @@ public class BMChart extends WXComponent implements IWebView.OnPageListener {
 
     private void init() {
         mWebView = new BMWebView(getContext());
+        WebView vw = mWebView.getWebView();
+        vw.removeJavascriptInterface("searchBoxJavaBridge_");
+        vw.removeJavascriptInterface("accessibility");
+        vw.removeJavascriptInterface("accessibilityTraversal");
     }
 
     private String getUrl(String url) {
